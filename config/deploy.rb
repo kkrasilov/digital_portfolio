@@ -37,7 +37,7 @@ task :deploy do
     command %(yarn)
     command %(bin/vite clobber)
     # command %(RAILS_ENV=production bundle exec rails assets:precompile)
-    command %(bin/vite build)
+    # command %(bin/vite build)
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
