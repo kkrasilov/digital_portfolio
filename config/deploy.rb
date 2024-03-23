@@ -36,9 +36,7 @@ task :deploy do
     invoke :'rails:db_migrate'
     command %(yarn)
     command %(bin/vite clobber)
-    # command %(RAILS_ENV=production bundle exec rails assets:precompile)
-    # command %(bin/vite build)
-    invoke :'rails:assets_precompile'
+    command %(bin/vite build)
     invoke :'deploy:cleanup'
 
     on :launch do
