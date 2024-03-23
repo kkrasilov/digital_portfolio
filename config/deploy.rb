@@ -9,8 +9,7 @@ set :domain, '37.230.113.230'
 set :user, 'deploy'
 set :deploy_to, '/var/www/digital'
 set :repository, 'git@github.com:kkrasilov/digital_portfolio.git'
-set :branch, 'master'
-set :bundle_without, %w{development test}.join(':')
+set :branch, 'test'
 set :shared_files, fetch(:shared_files, []).push(
   'config/database.yml',
   'config/credentials.yml.enc',
@@ -34,6 +33,7 @@ task :deploy do
     invoke :'bundle'
     invoke :'nvm:install'
     invoke :'rails:db_migrate'
+    command %(yarn)
     command %(bin/vite clobber)
     command %(bin/vite build)
     invoke :'deploy:cleanup'
@@ -51,6 +51,10 @@ task :nvm do
   command 'echo "-----> Installing Node Version Manager"'
   command 'curl -s https://raw.github.com/creationix/nvm/master/install.sh | sh'
   invoke :'nvm:load'
+end
+
+task :bundle do
+  command 'RAILS_ENV=production bundle install --without development test'
 end
 
 namespace :nvm do
