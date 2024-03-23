@@ -11,7 +11,7 @@ gem "bootsnap", require: false
 gem 'dotenv-rails'
 gem "sassc-rails"
 gem "vite_rails"
-
+gem 'sprockets', '~> 4.0'
 group :development, :test do
   gem 'pry-rails'
 end

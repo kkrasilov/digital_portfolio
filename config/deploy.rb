@@ -10,6 +10,7 @@ set :user, 'deploy'
 set :deploy_to, '/var/www/digital'
 set :repository, 'git@github.com:kkrasilov/digital_portfolio.git'
 set :branch, 'test'
+set :assets_prefix, 'vite'
 set :shared_files, fetch(:shared_files, []).push(
   'config/database.yml',
   'config/credentials.yml.enc',
@@ -37,6 +38,7 @@ task :deploy do
     command %(bin/vite clobber)
     # command %(RAILS_ENV=production bundle exec rails assets:precompile)
     command %(bin/vite build)
+    invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
     on :launch do
