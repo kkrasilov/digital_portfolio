@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "vite": "^5.2.4",
+    "vite-plugin-ruby": "^5.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "popper.js": "^1.16.1",
+    "sass": "^1.72.0"
+  }
+}
