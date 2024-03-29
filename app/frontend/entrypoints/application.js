@@ -26,3 +26,4 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 // Example: Import a stylesheet in app/frontend/index.css
 import './application.scss'
+import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min"

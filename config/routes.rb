@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  devise_for :users
+  root 'portfolios#index'
+
+  get '/guests', to: redirect('/guests.html')
+
+  resources :articles do 
+    get :about, on: :collection
+  end
 end

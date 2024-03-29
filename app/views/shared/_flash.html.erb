@@ -1,0 +1,6 @@
+<div class="<%= bootstrap_class_for(flash.keys.first) %> alert alert-dismissible fade show">
+  <% flash.each do |_, message| %>
+    <span><%= message %></span><br>
+  <% end %>
+  <button class='btn-close' data-bs-dismiss='alert'></button>
+</div>

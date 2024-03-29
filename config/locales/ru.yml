@@ -1,0 +1,62 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+
+    attributes:
+      user:
+        email: 'Email'
+        avatar: 'Аватарка'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              user_email_exists: 'Пользователь с таким email уже существует, пожалуйста авторизуйтесь!'
+
+  controllers:
+
+  app:
+    name: 'DIGITAL PORTFOLIO'
+
+  links:
+    register: 'Зарегистрироваться'
+    sign_in: 'Войти'
+    forgot_password: 'Забыли пароль?'
+    send_me: 'Отправить мне инструкции по сбросу пароля'
+    change: 'Изменить'
+    save: 'Сохранить'
+    to_return: 'Вернуться'
+    log_off: 'Выйти'
+    сhange_password: 'Сменить пароль'
+    edit_profile: 'Редактировать профиль'
+    update: 'Обновить'
+    delete_profile: 'Удалить мой аккаунт'
+    delete_event: 'Удалить событие'
+    load: 'Загрузить'
+    to_home: 'На главную'
+    to_home_errors: 'на главную страницу'
+
+  devise:
+    characters_minimum: 'минимальное количесвто символов'
+
+  heading:
+    forgot_your_password: 'Забыли свой пароль?'
+    еdit_profile: 'Редактировать профиль'
+    delete_account: 'Удалить аккаунт?'
+    registration: 'Регистрация'
+    come_in: 'Войти'
+    editing_event: 'Редактирование события'
+    еdit_password: 'Редактировать пароль'
+    change_password: 'Изменить пароль'
+
+  errors:
+    one: "В вашей форме %{count} ошибка"
+    few: "В вашей форме %{count} ошибки"
+    many: "В вашей форме %{count} ошибок"
+    not-found:
+      title: 'К сожалению страница не найдена.'
+      messeges: 'Вы можете смириться или перейти на'
