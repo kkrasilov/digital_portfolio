@@ -4,6 +4,7 @@
     "vite-plugin-ruby": "^5.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "popper.js": "^1.16.1",
     "sass": "^1.72.0"

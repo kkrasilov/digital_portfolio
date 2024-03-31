@@ -1,0 +1,11 @@
+<%= form_with url: root_path, class: "row g-2 justify-content-center", id: 'search-form', method: :get do |form| %>
+  <div class="col-sm-6">
+    <%= form.text_field :host, class: 'form-control' %>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary" type="submit" id='submit-search'>
+      <span class="spinner-grow spinner-grow-sm" id='search-spinner' style='display:none;' role="status" aria-hidden="true"></span>
+      Поиск
+    </button>
+  </div>
+<% end %>
