@@ -6,6 +6,7 @@ gem 'bootsnap', require: false
 gem 'devise'
 gem 'devise-i18n'
 gem 'dotenv-rails'
+gem 'image_processing', '>= 1.2'
 gem 'jwt_sessions'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
