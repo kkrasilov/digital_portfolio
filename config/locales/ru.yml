@@ -18,6 +18,8 @@ ru:
               user_email_exists: 'Пользователь с таким email уже существует, пожалуйста авторизуйтесь!'
 
   controllers:
+    application:
+      error: 'Упс! Что-то пошло не так. Код ошибки %{code}.'
 
   app:
     name: 'DIGITAL PORTFOLIO'
