@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :assert_path_allowed
 
   rescue_from Errors::NotAuthorized, with: :forbidden
-  rescue_from ActiveRecord::NotNullViolation, with: :forbidden
+  rescue_from StandardError, with: :log_error
 
   protected
 
@@ -31,5 +31,11 @@ class ApplicationController < ActionController::Base
 
   def forbidden
     redirect_to guests_path
+  end
+
+  def log_error(exp)
+    log = LogInfo.create(title: "#{self.class.name}##{action_name}", data: { exp: exp.message })
+    flash[:error] = I18n.t('controllers.application.error', code: log.id)
+    redirect_to root_path
   end
 end

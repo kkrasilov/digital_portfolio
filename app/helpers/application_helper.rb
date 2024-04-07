@@ -1,10 +1,8 @@
 module ApplicationHelper
-  def bootstrap_class_for(flash_type)
-    case flash_type
-    when 'success' then 'alert-success'
-    when 'error' then 'alert-danger'
-    when 'alert' then 'alert-warning'
-    when 'notice' then 'alert-info'
-    end
+  def flash_type(name)
+    return 'info' if name == 'notice'
+    return 'success' if name == 'notice'
+    return 'error' if name == 'alert'
+    name
   end
 end
