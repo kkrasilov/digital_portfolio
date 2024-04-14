@@ -11,20 +11,35 @@ $gray-800-color:  #424242;
   margin: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
+body, html {
+  height: 100%;
   margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
   padding: 0;
   background-color: #f2f2f2;
   color: #333;
 }
 
-// Buffers
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+}
+
 .buffer-top {
   margin-top: 10px;
 }
 
-// logo
 .logo {
   color: $gray-200-color;
   float: left;
@@ -55,7 +70,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 50px 0;
-  position: fixed;
   bottom: 0;
   width: 100%;
   a {
@@ -65,10 +79,6 @@ footer {
       color: $gray-700-color;
     }
   }
-}
-
-.main {
-  min-height: 600px;
 }
 
 a {
