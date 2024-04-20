@@ -27,13 +27,12 @@
               <%= current_user.login %>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Профиль', edit_user_registration_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'Профиль', profile_users_path, class: 'dropdown-item' %></li>
               <li><%= link_to 'Мое портфолио', root_path, class: 'dropdown-item' %></li>
               <li><hr class="dropdown-divider"></li>
               <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
             </ul>
           </li>
-         
         <% else %>
           <li><%= link_to 'Войти', new_user_session_path, class: 'nav-link' %></li>
           <li><%= link_to 'Регистрация', new_user_registration_path, class: 'nav-link' %></li>

@@ -1,0 +1,11 @@
+<h1 class="border-bottom text-dark pb-2">Редактировать профиль</h1>
+
+<div class="row">
+  <div class="col-md-6 buffer-top">
+    <%= render 'form', user: current_user %>
+
+    <p class="buffer-top">
+      <%= link_to 'Изменить пароль', edit_user_registration_path %>
+    </p>
+  </div>
+</div>
