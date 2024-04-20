@@ -1,10 +1,5 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min";
 @import "../stylesheets/toast";
-$gray-200-color:  #eee;
-$gray-400-color:  #bdbdbd;
-$gray-300-color:  #e0e0e0;
-$gray-700-color:  #616161;
-$gray-800-color:  #424242;
 
 * {
   padding: 0;
@@ -41,7 +36,7 @@ main {
 }
 
 .logo {
-  color: $gray-200-color;
+  color: #eee;
   float: left;
   font-size: 1.7em;
   font-weight: bold;
@@ -50,7 +45,7 @@ main {
   text-decoration: none;
 
   &:hover {
-    color: $gray-300-color;
+    color: #e0e0e0;
   }
 }
 
@@ -60,9 +55,11 @@ main {
   padding: 0 20px;
 
 }
+
 p {
   line-height: 1.6;
-  margin-bottom: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 footer {
@@ -72,15 +69,37 @@ footer {
   padding: 50px 0;
   bottom: 0;
   width: 100%;
+  margin-top: 30px;
   a {
-    color: $gray-400-color;
+    color: #bdbdbd;
 
     &:hover {
-      color: $gray-700-color;
+      color: #616161;
     }
   }
 }
 
 a {
   text-decoration: none;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.dark-text {
+  color: #332D2D;
+}
+
+.avatar-img {
+  width: 180px; 
+  border-radius: 10px
+}
+
+.profile-card {
+  border-radius: 15px;
+}
+
+.background-gray {
+  background-color: #efefef;
 }
