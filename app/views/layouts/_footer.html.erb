@@ -1,10 +1,8 @@
 <footer class="text-center border-top">
   <div>
     <small>
-      &copy <%= link_to "«DIGITAL PORTFOLIO»", root_path %>
-      <span class="pl-2">Создаем лучший сервис для портфолио с 2024 года</span>
+      &copy <%= link_to "«#{t('links.root')}»", root_path %>
+      <span class="pl-2"><%= t('footer.description') %></span>
     </small>
   </div>
 </footer>
-
-

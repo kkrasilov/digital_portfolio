@@ -1,7 +1,7 @@
 <h2 class="border-bottom text-dark pb-2"><%= t('heading.registration') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render partial: 'shared/form_errors', locals: {model: @user} %>
+  <%= render partial: 'shared/form_errors', locals: { model: @user } %>
   <div class="col-md-5">
     <div class="form-group">
       <%= f.label :login, class: '' %>

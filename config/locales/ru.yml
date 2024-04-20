@@ -6,7 +6,13 @@ ru:
     attributes:
       user:
         email: 'Email'
+        first_name: 'Имя'
+        surname: 'Фамилия'
+        last_name: 'Отчество'
+        position: 'Позиция'
+        about_me: 'Обо мне'
         avatar: 'Аватарка'
+        status: 'Статус'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
 
@@ -25,6 +31,9 @@ ru:
     name: 'DIGITAL PORTFOLIO'
 
   links:
+    root: "DIGITAL PORTFOLIO"
+    portfolio: 'Мое портфолио'
+    profile: 'Профиль'
     register: 'Зарегистрироваться'
     sign_in: 'Войти'
     forgot_password: 'Забыли пароль?'
@@ -32,12 +41,11 @@ ru:
     change: 'Изменить'
     save: 'Сохранить'
     to_return: 'Вернуться'
-    log_off: 'Выйти'
+    log_out: 'Выйти'
     сhange_password: 'Сменить пароль'
     edit_profile: 'Редактировать профиль'
     update: 'Обновить'
     delete_profile: 'Удалить мой аккаунт'
-    delete_event: 'Удалить событие'
     load: 'Загрузить'
     to_home: 'На главную'
     to_home_errors: 'на главную страницу'
@@ -54,11 +62,16 @@ ru:
     editing_event: 'Редактирование события'
     еdit_password: 'Редактировать пароль'
     change_password: 'Изменить пароль'
+   
+  footer:
+    description: 'Создаем лучший сервис для портфолио с 2024 года'
 
   errors:
     one: "В вашей форме %{count} ошибка"
     few: "В вашей форме %{count} ошибки"
     many: "В вашей форме %{count} ошибок"
-    not-found:
-      title: 'К сожалению страница не найдена.'
-      messeges: 'Вы можете смириться или перейти на'
+    
+  notice: 
+    updated: 'Данные обновлены'
+    need_sign_in: 'Необхоидмо авторизоваться'
+    

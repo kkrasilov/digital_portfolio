@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :articles do 
     get :about, on: :collection
   end
+
+  resources :users, only: %i[edit update] do
+    get :profile, on: :collection
+  end
 end
