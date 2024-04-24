@@ -1,31 +1,123 @@
-<div class="About_Page">
+<div class="about-page">
   <!--Секция описания-->
-  <main class="About_Description">
-    <h1>О сайте Digital Portfolio</h1>
-    <p> Сайт "диджитал портфолио" - это онлайн-платформа, специализирующаяся на подборе персонала и поиске работы для
+  <section class="description">
+    <h1 class="h1-style">О сайте Digital Portfolio</h1>
+    <p class="p-description-style"> Сайт "диджитал портфолио" - это онлайн-платформа, специализирующаяся на подборе персонала и поиске работы для
       программистов.
       На сайте вы можете создать профиль, загрузить свое портфолио, указать свои навыки и опыт работы. Работодатели
       могут просматривать профили кандидатов, а также публиковать вакансии.
       Благодаря удобному интерфейсу и широкому функционалу сайта, он станет вашим надежным помощником в поиске работы
       или подборе персонала в сфере IT. </p>
-  </main>
+  </section>
   <!--Конец описания-->
   <!------------------------->
   <!--Секция участников команды-->
-  <section class="Members">
-    <h1>Кто сделал Digital Portfolio</h1>
-    <!--Участник-->
-    <div class="member">
-      <img src="" alt="photo">
-      <h3>Красилов Константин</h3>
-      <p>Ну лучше что бы ты сам о себе рассказал)</p>
-      <div class="Social">
-        <a title="Habr" href="about.html.erb"><img src="\\wsl$\Ubuntu\home\notikke\digital_portfolio\app\views\img\Habr.png" alt="Habr"></a>
-        <a title="Telegram" href="about.html.erb"><img src="Картиночка с телегой" alt="Telegram"></a>
-        <a title="HH" href="about.html.erb"><img src="Картиночка с хед хантером" alt="HeadHunter"></a>
+    <section class="memebers">
+      <h1 class="h1-style">Кто сделал Digital Portfolio</h1>
+      <div class="row row-cols-2">
+
+        <!--Участник-->
+        <div class="member">
+          <h4 style ="color: whitesmoke">Красилов Константин</h4>
+          <%= vite_image_tag 'images/Habr.png', alt: "KK", class: "photo" %>
+          <p class="p-member-style">Ну лучше что бы ты сам о себе рассказал)</p>
+          <div class="Social">
+            <p class="p-member-style">Как можно связаться:</p>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/HH.jpg', alt: "HeadHunter", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+          </div>
+        </div>
+        <!--Участник-->
+
+        <!--Участник-->
+        <div class="member">
+          <h4 style ="color: whitesmoke">Красилов Константин</h4>
+          <%= vite_image_tag 'images/Habr.png', alt: "KK", class: "photo" %>
+          <p class="p-member-style">Ну лучше что бы ты сам о себе рассказал)</p>
+          <div class="Social">
+            <p class="p-member-style">Как можно связаться:</p>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/HH.jpg', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+          </div>
+        </div>
+        <!--Участник-->
+
+        <!--Участник-->
+        <div class="member">
+          <h4 style ="color: whitesmoke">Красилов Константин</h4>
+          <%= vite_image_tag 'images/Habr.png', alt: "KK", class: "photo" %>
+          <p class="p-member-style">Ну лучше что бы ты сам о себе рассказал)</p>
+          <div class="Social">
+            <p class="p-member-style">Как можно связаться:</p>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/HH.jpg', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+          </div>
+        </div>
+        <!--Участник-->
+
+        <!--Участник-->
+        <div class="member">
+          <h4 style ="color: whitesmoke">Красилов Константин</h4>
+          <%= vite_image_tag 'images/Habr.png', alt: "KK", class: "photo" %>
+          <p class="p-member-style">Ну лучше что бы ты сам о себе рассказал)</p>
+          <div class="Social">
+            <p class="p-member-style">Как можно связаться:</p>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/HH.jpg', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+          </div>
+        </div>
+        <!--Участник-->
+
+        <!--Участник-->
+        <div class="member">
+          <h4 style ="color: whitesmoke">Красилов Константин</h4>
+          <%= vite_image_tag 'images/Habr.png', alt: "KK", class: "photo" %>
+          <p class="p-member-style">Ну лучше что бы ты сам о себе рассказал)</p>
+          <div class="Social">
+            <p class="p-member-style">Как можно связаться:</p>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/HH.jpg', alt: "Habr", class: "image" %>
+            <% end %>
+            <%= link_to 'https://habr.com/ru/articles/top/monthly/' do %>
+              <%= vite_image_tag 'images/Habr.png', alt: "Habr", class: "image" %>
+            <% end %>
+          </div>
+        </div>
+        <!--Участник-->
+
       </div>
-    </div>
-      <!--Участник-->
+    </section>
   </section>
   <!--Конец секции участников команды-->
 </div>

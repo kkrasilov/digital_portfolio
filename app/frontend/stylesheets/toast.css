@@ -1,3 +1,11 @@
+
+.image {
+    width: 400px;
+    height: 400px;
+  }
+  
+  
+
 .uiToastBlock {
     position: fixed;
     top: 32px;
