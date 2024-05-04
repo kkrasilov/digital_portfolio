@@ -1,14 +1,35 @@
+<style>
+    .header-12 {
+        border-bottom: 1px solid #BDBDBD;
+        padding-bottom: 10px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+</style>
+
 <section>
   <div class="row">
     <div class="col-3">
       <%= render 'user' %>
     </div>
     <div class="col">
-      <div class="row" style="min-height: 200px;">
+      <div class="row">
         <%= render 'awards' %>
       </div>
-      <div class="row" style="min-height: 500px; background-color: #6c757d">
-        <h4>Проекты</h4>
+      <div class="row">
+        <div class="header-12">
+          <h4 class="left">Проекты</h4>
+          <button type="button" class="btn btn-outline-secondary right" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Добавить
+          </button>
+        </div>
       </div>
     </div>
   </div>

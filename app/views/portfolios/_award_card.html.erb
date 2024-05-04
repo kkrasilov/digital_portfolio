@@ -3,11 +3,16 @@
     <%= vite_image_tag 'images/award.png', alt: "Аватарка", width: 70, height: 70 %>
   </div>
   <div>
-    <span class="award-title">Devops курс от Хекслета</span>
+    <span class="award-title"><%= award.title %></span>
     <p class="award-description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dumm
+      <%= award.description  %>
     </p>
-    <a href="#" class="award-link">hexlet.pdf</a>
+    <a href="#" class="award-link"><%= link_to award.file.filename, rails_blob_path(award.file), class: 'award-link' %></a>
+    <div class="element" style="display: flex; gap: 10px">
+      <button type="button" class="awards-modal" data-award-id="<%= award.id %>"><i class="bi bi-pencil-fill" data-award-id="<%= award.id %>"></i></button>
+      <%= button_to award_path(award), method: :delete, class: "delete-button" do %>
+        <i class="bi bi-trash3-fill"></i>
+      <% end %>
+    </div>
   </div>
 </div>

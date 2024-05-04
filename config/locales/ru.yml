@@ -15,6 +15,10 @@ ru:
         status: 'Статус'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+      award:
+        title: Заголовок
+        description: Описание
+        file: Файл
 
     errors:
       models:

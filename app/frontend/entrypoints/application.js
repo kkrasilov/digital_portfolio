@@ -30,3 +30,55 @@ import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min"
 import toast from './toast'
 
 window.toast = toast;
+
+
+
+
+
+async function fetchDataAndUpdateContent(event) {
+    // Получаем значение атрибута target
+    var awardId = event.target.getAttribute("data-award-id");
+    var portfolioId = event.target.getAttribute("data-portfolio-id");
+
+    var url = portfolioId ? `http://localhost:3000/awards/new?portfolio_id=${portfolioId}` : `http://localhost:3000/awards/${awardId}/edit`;
+
+    try {
+        const response = await fetch(url, { method: "GET" });
+
+        const html = await response.json();
+
+        const element = document.getElementById("my-id");
+        element.innerHTML = html["partial"];
+        console.log("end");
+
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        keyboard: false
+            })
+        myModal.show();
+
+    } catch (error) {
+        console.error('Ошибка при выполнении запроса:', error);
+    }
+}
+
+
+var awardsModals = document.querySelectorAll(".awards-modal");
+
+// Проходим по каждому элементу и добавляем обработчик события
+awardsModals.forEach(function(modal) {
+    modal.addEventListener("click", fetchDataAndUpdateContent);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const deleteButtons = document.querySelectorAll('.delete-button');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const isConfirmed = confirm('Вы уверены?');
+            if (!isConfirmed) {
+                event.preventDefault();
+            }
+        });
+    });
+});

@@ -51,13 +51,6 @@ main {
   }
 }
 
-.container_general {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-
-}
-
 p {
   line-height: 1.6;
   padding: 0;
@@ -108,4 +101,13 @@ a {
 
 .background-gray {
   background-color: #efefef;
+}
+
+button {
+  all: unset;
+  color: #616161;
+}
+
+button:hover {
+  color: #4F4F4F;
 }

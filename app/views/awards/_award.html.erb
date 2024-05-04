@@ -1,0 +1,31 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= award.new_record? ? 'Добавить файл' : 'Редактировать файл' %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= form_for award.presence || Award.new, html: { multipart: true } do |f| %>
+          <div class="mb-2">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>
+          <div class="mb-2">
+            <%= f.label :description  %>
+            <%= f.text_area :description, class: 'form-control', col: 50, rows: 10 %>
+          </div>
+          <div class="mt-4">
+            <%= f.label :file %>
+            <%= f.file_field :file %>
+          </div>
+          <%= f.hidden_field :portfolio_id, value: award.portfolio_id %>
+          <div class="modal-footer mt-4">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%= f.submit t('links.save'), class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

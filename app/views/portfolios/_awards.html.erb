@@ -1,5 +1,6 @@
 <style>
     .general {
+        min-height: 200px;
         margin: 20px;
         display: flex;
         flex-wrap: wrap;
@@ -8,6 +9,7 @@
     }
 
     .awards {
+        width: 50%;
         display: flex;
         max-width: 400px;
         gap: 20px;
@@ -33,26 +35,42 @@
         color: #78909C; /* Цвет текста при наведении */
     }
 
-    .header {
+    .header-12 {
         border-bottom: 1px solid #BDBDBD;
         padding-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
     }
-    
-    .header a {
-        margin-left: auto; /* Прижимаем ссылку к правому краю */
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+        
+    .element {
+        opacity: 0; /* Начальное состояние - элементы невидимы */
+        transition: opacity 0.3s ease; /* Анимация изменения прозрачности */
+    }
+
+    .awards:hover .element {
+        opacity: 1; /* Появление элементов при наведении */
     }
 </style>
-<div class="header">
-  <h4>Сертификаты и награды</h4>
-  <%= link_to 'Добавить', root_path, class: 'btn btn-outline-secondary' %>
+
+<div class="header-12">
+  <h4 class="left">Сертификаты и награды</h4>
+  <%#= render 'award_form', award: Award.new %>
+  <button type="button" class="btn btn-outline-secondary right awards-modal" data-portfolio-id="<%= @portfolio.id %>">
+    Добавить
+  </button>
+</div>
+<div id="my-id">
 </div>
 
+
 <div class="general">
-  <%= render 'award_card' %>
-  <%= render 'award_card' %>
-  <%= render 'award_card' %>
-  <%= render 'award_card' %>
-  <%= render 'award_card' %>
+  <% @portfolio.awards.each do %>
+    <%= render 'award_card', award: _1 %>
+  <% end %>
 </div>
