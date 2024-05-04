@@ -74,4 +74,11 @@ ru:
   notice: 
     updated: 'Данные обновлены'
     need_sign_in: 'Необхоидмо авторизоваться'
-    
+    not_found: 'Запись не найдена'
+
+  time_last:
+    zero: 'Сегодня'
+    one: "%{count} день назад"
+    few: "%{count} дня назад"
+    many: "%{count} дней назад"  
+

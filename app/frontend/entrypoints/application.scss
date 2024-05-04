@@ -1,5 +1,7 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min";
 @import "../stylesheets/toast";
+@import "../stylesheets/portfolio";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 * {
   padding: 0;
@@ -96,6 +98,10 @@ a {
   border-radius: 10px
 }
 
+.avatar-img-mini {
+  width: 75px;
+  border-radius: 10px
+}
 .profile-card {
   border-radius: 15px;
 }

@@ -9,7 +9,7 @@ set :domain, '37.230.113.230'
 set :user, 'deploy'
 set :deploy_to, '/var/www/digital'
 set :repository, 'git@github.com:kkrasilov/digital_portfolio.git'
-set :branch, 'test'
+set :branch, 'develop'
 set :assets_prefix, 'vite'
 set :shared_files, fetch(:shared_files, []).push(
   'config/database.yml',

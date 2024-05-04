@@ -1,0 +1,19 @@
+<div class="pt-2">
+  <% if @portfolio.user.avatar.attached? %>
+    <%= image_tag(@portfolio.user.avatar, class: 'img-fluid avatar-img', alt: 'Аватарка') %>
+  <% else %>
+    <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "img-fluid avatar-img"%>
+  <% end %>
+</div>
+<div>
+  <span style="font-size: 24px"><%= @portfolio.user.short_name %></span><br>
+  <span style="font-size: 16px"><%= "@#{@portfolio.user.login}" %></span><br>
+  <span style="font-size: 18px"><%= @portfolio.user.position %></span><br>
+  <span style="font-size: 18px"><%= @portfolio.user.email %></span><br>
+  <span style="font-size: 18px"><%= @portfolio.user.about_me %></span><br>
+  <% if current_user.presence == @portfolio.user %>
+    <p class="buffer-top">
+      <%= link_to 'Редактировать профиль',
+                  edit_user_path(current_user), class: 'btn btn-outline-secondary' %></p>
+  <% end %>
+</div>

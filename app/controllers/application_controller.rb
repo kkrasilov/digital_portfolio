@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :assert_path_allowed
+  before_action :update_last_seen_at, if: -> { current_user.present? && current_user.last_seen_at&.to_date != Date.today }
+  # before_action :assert_path_allowed
 
   rescue_from Errors::NotAuthorized, with: :forbidden
   rescue_from StandardError, with: :log_error
@@ -8,7 +9,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[login email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[login email first_name surname position])
   end
 
   private
@@ -37,5 +38,9 @@ class ApplicationController < ActionController::Base
     log = LogInfo.create(title: "#{self.class.name}##{action_name}", data: { exp: exp.message })
     flash[:error] = I18n.t('controllers.application.error', code: log.id)
     redirect_to root_path
+  end
+                                        
+  def update_last_seen_at
+    current_user.update_attribute(:last_seen_at, Time.current)
   end
 end

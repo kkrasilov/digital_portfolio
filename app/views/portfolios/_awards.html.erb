@@ -1,0 +1,58 @@
+<style>
+    .general {
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .awards {
+        display: flex;
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    .award-title {
+        color: #00796B;
+        font-weight: bold;
+    }
+
+    .award-description {
+        line-height: 18px;
+        font-size: 14px;
+    }
+
+    .award-link {
+        color: #B0BEC5; /* Цвет текста */
+        font-weight: bold; /* Жирный текст */
+        transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    }
+
+    .award-link:hover {
+        color: #78909C; /* Цвет текста при наведении */
+    }
+
+    .header {
+        border-bottom: 1px solid #BDBDBD;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header a {
+        margin-left: auto; /* Прижимаем ссылку к правому краю */
+    }
+</style>
+<div class="header">
+  <h4>Сертификаты и награды</h4>
+  <%= link_to 'Добавить', root_path, class: 'btn btn-outline-secondary' %>
+</div>
+
+<div class="general">
+  <%= render 'award_card' %>
+  <%= render 'award_card' %>
+  <%= render 'award_card' %>
+  <%= render 'award_card' %>
+  <%= render 'award_card' %>
+</div>
