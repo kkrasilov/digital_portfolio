@@ -30,7 +30,8 @@ import toast from './toast'
 import { Modal } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
 import { Dropdown } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
 window.toast = toast;
-var dd = new Dropdown(document.getElementById('drown'));
+
+new Dropdown(document.getElementById('drown'));
 
 async function fetchDataAndUpdateContent(event) {
     var awardId = event.target.getAttribute("data-award-id");
@@ -55,7 +56,6 @@ var awardsModals = document.querySelectorAll(".awards-modal");
 awardsModals.forEach(function(modal) {
     modal.addEventListener("click", fetchDataAndUpdateContent);
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const deleteButtons = document.querySelectorAll('.delete-button');
