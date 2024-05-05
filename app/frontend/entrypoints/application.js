@@ -42,7 +42,7 @@ async function fetchDataAndUpdateContent(event) {
         const element = document.getElementById("award-modal");
         
         element.innerHTML = html["partial"];
-        
+
         var awardModal = new bootstrap.Modal(document.getElementById('exampleModal'), { keyboard: false })
 
         awardModal.show();
