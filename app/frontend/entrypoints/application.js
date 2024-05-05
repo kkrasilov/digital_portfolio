@@ -26,9 +26,9 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 // Example: Import a stylesheet in app/frontend/index.css
 import './application.scss'
-import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min"
+import "../../../node_modules/bootstrap/dist/js/bootstrap.min"
 import toast from './toast'
-
+import { Modal } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
 window.toast = toast;
 
 
@@ -43,10 +43,8 @@ async function fetchDataAndUpdateContent(event) {
         
         element.innerHTML = html["partial"];
 
-        var awardModal = new bootstrap.Modal(document.getElementById('exampleModal'), { keyboard: false })
-
-        awardModal.show();
-
+        let myModal = new Modal(document.getElementById('exampleModal'), { keyboard: false })
+        myModal.show();
     } catch (error) {
         console.error('Ошибка при выполнении запроса:', error);
     }
