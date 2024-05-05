@@ -26,11 +26,11 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 // Example: Import a stylesheet in app/frontend/index.css
 import './application.scss'
-import "../../../node_modules/bootstrap/dist/js/bootstrap.min"
 import toast from './toast'
 import { Modal } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
+import { Dropdown } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
 window.toast = toast;
-
+var dd = new Dropdown(document.getElementById('drown'));
 
 async function fetchDataAndUpdateContent(event) {
     var awardId = event.target.getAttribute("data-award-id");
