@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// for about page
 const avatarToggles = document.querySelectorAll('.avatar-toggle');
 const targets = document.querySelectorAll('.target');
 
