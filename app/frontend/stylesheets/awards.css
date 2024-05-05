@@ -1,0 +1,44 @@
+.awards-container {
+    min-height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.awards {
+    width: 50%;
+    display: flex;
+    max-width: 400px;
+    gap: 20px;
+}
+
+.award-title {
+    color: #00796B;
+    font-weight: bold;
+}
+
+.award-description {
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.award-link {
+    color: #B0BEC5;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.award-link:hover {
+    color: #78909C;
+}
+
+.element {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.awards:hover .element {
+    opacity: 1;
+}

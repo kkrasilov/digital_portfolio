@@ -11,8 +11,20 @@ class User < ApplicationRecord
   has_one :portfolio, dependent: :destroy
 
   has_one_attached :avatar
+  has_one_attached :admin_avatar
+
+  enum role: {
+    developer: 'developer',
+    designer:  'designer',
+    analyst:   'analyst',
+    CTO:       'CTO'
+  }
 
   def short_name
     "#{surname} #{first_name}"
+  end
+  
+  def role_name
+    self.CTO? ? role : role.capitalize
   end
 end

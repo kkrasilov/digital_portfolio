@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= form_for award.presence || Award.new, html: { multipart: true } do |f| %>
+        <%= form_for award, html: { multipart: true } do |f| %>
           <div class="mb-2">
             <%= f.label :title %>
             <%= f.text_field :title, class: 'form-control' %>
@@ -19,9 +19,8 @@
             <%= f.label :file %>
             <%= f.file_field :file %>
           </div>
-          <%= f.hidden_field :portfolio_id, value: award.portfolio_id %>
           <div class="modal-footer mt-4">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Выйти</button>
             <%= f.submit t('links.save'), class: 'btn btn-primary' %>
           </div>
         <% end %>

@@ -32,39 +32,28 @@ import toast from './toast'
 window.toast = toast;
 
 
-
-
-
 async function fetchDataAndUpdateContent(event) {
-    // Получаем значение атрибута target
     var awardId = event.target.getAttribute("data-award-id");
-    var portfolioId = event.target.getAttribute("data-portfolio-id");
-
-    var url = portfolioId ? `http://localhost:3000/awards/new?portfolio_id=${portfolioId}` : `http://localhost:3000/awards/${awardId}/edit`;
+    var url = awardId ? `http://localhost:3000/awards/${awardId}/edit` : `http://localhost:3000/awards/new`;
 
     try {
         const response = await fetch(url, { method: "GET" });
-
         const html = await response.json();
-
-        const element = document.getElementById("my-id");
+        const element = document.getElementById("award-modal");
+        
         element.innerHTML = html["partial"];
-        console.log("end");
+        
+        var awardModal = new bootstrap.Modal(document.getElementById('exampleModal'), { keyboard: false })
 
-        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-        keyboard: false
-            })
-        myModal.show();
+        awardModal.show();
 
     } catch (error) {
         console.error('Ошибка при выполнении запроса:', error);
     }
 }
 
-
 var awardsModals = document.querySelectorAll(".awards-modal");
 
-// Проходим по каждому элементу и добавляем обработчик события
 awardsModals.forEach(function(modal) {
     modal.addEventListener("click", fetchDataAndUpdateContent);
 });
@@ -80,5 +69,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
             }
         });
+    });
+});
+
+const avatarToggles = document.querySelectorAll('.avatar-toggle');
+const targets = document.querySelectorAll('.target');
+
+avatarToggles.forEach(avatarToggle => {
+    avatarToggle.addEventListener('mouseenter', () => {
+        avatarToggle.style.display = 'none';
+
+        const id = avatarToggle.id;
+        const target = document.getElementById(`target-${id}`);
+
+        if (target) { target.style.display = 'block'; }
+    });
+});
+
+targets.forEach(target => {
+    target.addEventListener('mouseleave', () => {
+        target.style.display = 'none';
+
+        const targetId = target.id;
+
+        const avatarToggle = document.querySelector(`.avatar-toggle[id="${targetId.split('-')[1]}"]`);
+
+        if (avatarToggle) { avatarToggle.style.display = 'block'; }
     });
 });

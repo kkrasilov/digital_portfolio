@@ -1,7 +1,11 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "../stylesheets/toast";
 @import "../stylesheets/portfolio";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import "../stylesheets/about";
+@import "../stylesheets/awards";
 
 * {
   padding: 0;
@@ -110,4 +114,12 @@ button {
 
 button:hover {
   color: #4F4F4F;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

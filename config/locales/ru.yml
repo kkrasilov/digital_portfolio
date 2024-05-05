@@ -12,13 +12,15 @@ ru:
         position: 'Позиция'
         about_me: 'Обо мне'
         avatar: 'Аватарка'
-        status: 'Статус'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        role: 'Направление'
+        admin_description: 'Роль в проекте'
+        admin_avatar: 'Дополнительный аватар'
       award:
-        title: Заголовок
-        description: Описание
-        file: Файл
+        title: 'Заголовок'
+        description: 'Описание'
+        file: 'Файл'
 
     errors:
       models:
