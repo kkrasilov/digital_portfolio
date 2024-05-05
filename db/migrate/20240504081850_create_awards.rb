@@ -3,7 +3,7 @@ class CreateAwards < ActiveRecord::Migration[7.1]
     create_table :awards do |t|
       t.string :title, null: false, default: ''
       t.text :description, null: false, default: ''
-      t.integer :portfolio
+      t.integer :portfolio_id
 
       t.timestamps
     end

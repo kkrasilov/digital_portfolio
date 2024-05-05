@@ -34,7 +34,7 @@ window.toast = toast;
 
 async function fetchDataAndUpdateContent(event) {
     var awardId = event.target.getAttribute("data-award-id");
-    var url = awardId ? `http://localhost:3000/awards/${awardId}/edit` : `http://localhost:3000/awards/new`;
+    var url = awardId ? `/awards/${awardId}/edit` : `/awards/new`;
 
     try {
         const response = await fetch(url, { method: "GET" });
