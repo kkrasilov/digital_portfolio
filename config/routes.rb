@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[edit update] do
     get :profile, on: :collection
   end
+
+  resources :portfolios, only: %i[index show]
+  resources :awards, only: %i[new edit create update destroy]
 end

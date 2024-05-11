@@ -1,0 +1,21 @@
+<div class="awards">
+  <div>
+    <%= vite_image_tag 'images/award.png', alt: "Сертификат", width: 70, height: 70 %>
+  </div>
+  <div>
+    <span class="award-title"><%= award.title %></span>
+    <p class="award-description">
+      <%= award.description %>
+    </p>
+    <%= link_to award.file.filename, rails_blob_path(award.file), class: 'award-link' %>
+    <% if current_user == @portfolio.user %>
+      <div class="element" style="display: flex; gap: 10px">
+        <button type="button" class="awards-modal" data-award-id="<%= award.id %>">
+          <i class="bi bi-pencil-fill" data-award-id="<%= award.id %>"></i></button>
+        <%= button_to award_path(award), method: :delete, class: "delete-button" do %>
+          <i class="bi bi-trash3-fill"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

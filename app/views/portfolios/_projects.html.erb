@@ -1,0 +1,8 @@
+<div class="portfolio-title">
+  <h4 class="left">Проекты</h4>
+  <% if current_user == @portfolio.user %>
+    <button type="button" class="btn btn-outline-secondary right">
+      Добавить
+    </button>
+  <% end %>
+</div>

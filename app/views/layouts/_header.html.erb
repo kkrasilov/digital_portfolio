@@ -6,7 +6,7 @@
     <% if user_signed_in? %>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <%= link_to t('links.portfolio'), root_path, class: 'nav-link active', 'aria-current': 'page' %>
+          <%= link_to t('links.portfolio'), portfolio_path(current_user.portfolio), class: 'nav-link active', 'aria-current': 'page' %>
         </li>
       </ul>
     <% end %>
@@ -22,13 +22,13 @@
     <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
       <ul class="nav navbar-nav justify-content-end ml-auto">
         <% if user_signed_in? %>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" id="drown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <%= current_user.login %>
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to t('links.profile'), profile_users_path, class: 'dropdown-item' %></li>
-              <li><%= link_to t('links.portfolio'), root_path, class: 'dropdown-item' %></li>
+              <li><%= link_to t('links.portfolio'), portfolio_path(current_user.portfolio), class: 'dropdown-item' %></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

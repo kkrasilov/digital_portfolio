@@ -1,0 +1,14 @@
+<div class="portfolio-title">
+  <h4 class="left">Сертификаты и награды</h4>
+   <% if current_user == @portfolio.user %>
+    <button type="button" class="btn btn-outline-secondary right awards-modal">
+      Добавить
+    </button>
+  <% end %>
+</div>
+<div id="award-modal"></div>
+<div class="awards-container">
+  <% @portfolio.awards.order(created_at: :asc).each do %>
+    <%= render 'awards/card', award: _1 %>
+  <% end %>
+</div>

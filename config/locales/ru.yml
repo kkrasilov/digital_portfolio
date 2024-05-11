@@ -15,6 +15,13 @@ ru:
         status: 'Статус'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        role: 'Направление'
+        admin_description: 'Роль в проекте'
+        admin_avatar: 'Дополнительный аватар'
+      award:
+        title: 'Заголовок'
+        description: 'Описание'
+        file: 'Файл'
 
     errors:
       models:
@@ -74,4 +81,10 @@ ru:
   notice: 
     updated: 'Данные обновлены'
     need_sign_in: 'Необхоидмо авторизоваться'
-    
+    not_found: 'Запись не найдена'
+
+  time_last:
+    zero: 'Сегодня'
+    one: "%{count} день назад"
+    few: "%{count} дня назад"
+    many: "%{count} дней назад"  

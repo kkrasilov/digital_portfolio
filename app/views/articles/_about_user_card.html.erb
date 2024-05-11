@@ -1,0 +1,17 @@
+<div class="about-team-card">
+  <% if user.avatar.attached? %>
+    <%= image_tag(user.avatar, class: 'round-image avatar-toggle', alt: 'Аватарка', id: user.id) %>
+    <% if user.admin_avatar.attached? %>
+      <%= image_tag(user.admin_avatar, class: 'round-image target', alt: 'Аватарка', id: "target-#{user.id}") %>
+    <% end %>
+  <% else %>
+    <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "round-image" %>
+  <% end %>
+
+  <div class="mt-2" style="color: #BDBDBD">
+    <%= link_to "@#{user.login}", portfolio_path(user.portfolio)%> • <%= user.role_name %>
+  </div>
+  <div class="mt-2">
+    <%= user.admin_description %>
+  </div>
+</div>

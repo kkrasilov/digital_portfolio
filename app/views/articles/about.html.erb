@@ -1,14 +1,29 @@
-<div class="container_general">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar justo vel sapien congue, eget tempor velit
-    malesuada. Proin nec sapien vel lorem sollicitudin dignissim. Donec tincidunt velit at leo posuere, at lobortis est
-    fermentum. Fusce finibus massa quis ante rutrum, at viverra odio posuere. Nullam sed nulla vitae tortor placerat
-    consequat. Curabitur eu felis a magna vestibulum convallis. Nulla facilisi. Cras sit amet arcu sit amet justo
-    vehicula viverra.</p>
-  <p>Nulla vestibulum eros id nibh commodo, a volutpat ex ultricies. Integer fermentum nisi et libero laoreet, nec
-    fermentum ligula hendrerit. Duis efficitur diam id ligula fringilla, ac commodo sapien dapibus. Nulla facilisi.
-    Morbi posuere ante eu quam dignissim vehicula. Pellentesque sit amet enim nec neque fermentum condimentum. Duis sit
-    amet felis quis velit tempus tempor.</p>
-  <p>Etiam vitae consectetur turpis. Donec eu eros sit amet magna dignissim accumsan. Cras suscipit est nec est
-    scelerisque, eget tincidunt nisl cursus. Integer et gravida magna. Mauris ut arcu id libero eleifend mattis.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi.</p>
+<div class="about-container">
+  <div class="about-info">
+    <span class="about-title">О Digital Portfolio</span>
+    <p class="mt-4">
+      Мы верим в силу индивидуальности и таланта каждого человека. Наша цель - создать цифровое пространство, где
+      каждый может выразить свои уникальные способности и достижения. Digital Portfolio - это не просто платформа для
+      поиска работы или специалистов, это место, где ваши успехи становятся видимыми и вдохновляют других.
+    </p>
+    <p class="mt-4">
+      Мы стремимся сделать процесс поиска работы и найма персонала максимально простым, прозрачным и эффективным.
+      Мы убеждены, что каждый заслуживает возможности представить свой талант и найти свое место в мире IT.
+    </p>
+    <p class="mt-4">
+      Digital Portfolio - это не просто платформа, это сообщество людей, объединенных стремлением к развитию и
+      достижению новых высот в своей карьере. Мы поддерживаем разнообразие, инновации и коллективное развитие.
+      Присоединяйтесь к нам и давайте вместе создавать будущее IT-индустрии
+    </p>
+  </div>
+  
+  <div class="about-title-second">
+    <span>Кто создает Digital Portfolio?</span>
+  </div>
+  
+  <div class="about-teams">
+    <% @users.each do %>
+        <%= render 'about_user_card', user: _1 %>
+    <% end %>
+  </div>
 </div>
