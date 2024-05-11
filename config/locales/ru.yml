@@ -12,6 +12,7 @@ ru:
         position: 'Позиция'
         about_me: 'Обо мне'
         avatar: 'Аватарка'
+        status: 'Статус'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         role: 'Направление'
@@ -87,4 +88,3 @@ ru:
     one: "%{count} день назад"
     few: "%{count} дня назад"
     many: "%{count} дней назад"  
-

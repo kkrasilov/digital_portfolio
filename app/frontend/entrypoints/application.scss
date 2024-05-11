@@ -55,6 +55,13 @@ main {
   }
 }
 
+.container_general {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+
+}
+
 p {
   line-height: 1.6;
   padding: 0;
@@ -99,6 +106,7 @@ a {
   width: 75px;
   border-radius: 10px
 }
+
 .profile-card {
   border-radius: 15px;
 }

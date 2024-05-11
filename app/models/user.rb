@@ -23,7 +23,7 @@ class User < ApplicationRecord
   def short_name
     "#{surname} #{first_name}"
   end
-  
+
   def role_name
     self.CTO? ? role : role.capitalize
   end
