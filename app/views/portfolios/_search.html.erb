@@ -1,6 +1,6 @@
-<%= form_with url: root_path, class: "row g-2 justify-content-center", id: 'search-form', method: :get do |form| %>
+<%= form_with url: portfolios_path, class: "row g-2 justify-content-center", id: 'search-form', method: :get do |form| %>
   <div class="col-sm-6">
-    <%= form.text_field :host, class: 'form-control' %>
+    <%= form.text_field :q, class: 'form-control' %>
   </div>
   <div class="col-auto">
     <button class="btn btn-primary" type="submit" id='submit-search'>

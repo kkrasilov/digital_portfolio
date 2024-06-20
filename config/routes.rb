@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
 
   resources :portfolios, only: %i[index show]
+  resources :errors, only: %i[index]
   resources :awards, only: %i[new edit create update destroy]
 end
