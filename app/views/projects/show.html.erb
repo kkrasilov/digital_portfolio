@@ -1,0 +1,124 @@
+<style>
+    .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .project-title {
+        font-size: 30px;
+        border-bottom: 1px solid #BDBDBD;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .text-bold {
+        font-weight: 800;
+    }
+
+    .text-project {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .progress-container {
+        width: 20%;
+        height: 30px;
+        background-color: #a5aec0;
+        border-radius: 20px;
+    }
+
+    .progress-bar {
+        background-color: #4caf50;
+        border-radius: 20px;
+        height: 30px;
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .project-info-right {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+
+    .project-description {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+
+    .project-second-title {
+        padding-top: 10px;
+    }
+</style>
+
+<div class="project-container">
+  <div class="project-card">
+    <div class="project-title">
+      <span class="text-bold text-project">
+        <%= @project.title %>
+      </span>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="row project-info">
+      <div class="col-8">
+        <div class="project-description">
+          <span class="project-second-title text-bold">Описание</span>
+          <div style="padding-top: 10px">
+            <%= @project.description %>
+          </div>
+        </div>
+        <div class="project-description">
+          <span class="project-second-title text-bold">Стек технологий</span>
+          <div style="padding-top: 10px">
+            Ruby, Rails
+          </div>
+        </div>
+      </div>
+      <div class="col-4 project-info-right">
+        <div class="project-description">
+          <span class="project-second-title text-bold">Ссылки</span>
+          <div style="padding-top: 10px">
+            <% @project.urls.each do %>
+                <span><%= _1['url'] %> <%= _1['title']%></span>
+            <% end %>
+          </div>
+        </div>
+        <div class="project-description">
+          <span class="project-second-title text-bold">Участники</span>
+          <div style="padding-top: 10px">
+            <% User.all.each do |user| %>
+              <% if user.avatar.attached? %>
+                <%= image_tag(user.avatar, class: 'img-fluid avatar-img-mini-two', alt: 'Аватарка') %>
+              <% else %>
+                <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "img-fluid avatar-img-mini-two" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
