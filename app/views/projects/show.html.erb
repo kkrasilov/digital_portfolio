@@ -47,10 +47,12 @@
           <span class="project-second-title text-bold">Участники</span>
           <div style="padding-top: 10px">
             <% @project.users.each do |user| %>
-              <% if user.avatar.attached? %>
-                <%= image_tag(user.avatar, class: 'img-fluid avatar-img-mini-two', alt: 'Аватарка') %>
-              <% else %>
-                <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "img-fluid avatar-img-mini-two" %>
+              <%= link_to portfolio_path(user.portfolio) do %>
+                <% if user.avatar.attached? %>
+                  <%= image_tag(user.avatar, class: 'img-fluid avatar-img-mini-two', alt: 'Аватарка') %>
+                <% else %>
+                  <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "img-fluid avatar-img-mini-two" %>
+                <% end %>
               <% end %>
             <% end %>
           </div>
