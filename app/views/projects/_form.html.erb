@@ -53,5 +53,7 @@
     <% end %>
     </div>
 
-    <%= button_to 'Удалить', project_path(@project), method: :delete, class: 'btn btn-secondary mt-2 delete-button' %>
+    <% if @project.present? %>
+       <%= button_to 'Удалить', project_path(@project), method: :delete, class: 'btn btn-secondary mt-2 delete-button' %>
+     <% end %>
 </div>
