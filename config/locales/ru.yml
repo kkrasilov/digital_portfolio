@@ -27,8 +27,13 @@ ru:
         status: "Статус"
         progress: "Процесс"
         content: "Описание"
+        base_url: "Ссылка на проект"
+        code_url: "Ссылка на код"
+        technologies: "Стек технологий"
+        short_description: "Краткое описание"
+        image: "Заставка"
         statuses:
-          active: "Активный"
+          done: "Завершен"
           draft: "В процессе"
 
     errors:
@@ -77,6 +82,8 @@ ru:
     editing_event: 'Редактирование события'
     еdit_password: 'Редактировать пароль'
     change_password: 'Изменить пароль'
+    new_project: 'Новый проект'
+    edit_project: 'Редактирование проекта'
    
   footer:
     description: 'Создаем лучший сервис для портфолио с 2024 года'
@@ -90,6 +97,7 @@ ru:
     updated: 'Данные обновлены'
     need_sign_in: 'Необхоидмо авторизоваться'
     not_found: 'Запись не найдена'
+    delete_project: 'Проект удален'
 
   time_last:
     zero: 'Сегодня'

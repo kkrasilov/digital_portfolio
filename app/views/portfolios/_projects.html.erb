@@ -5,10 +5,8 @@
   <% end %>
 </div>
 <div class="awards-container">
-  <%= render 'projects/card' %>
-  <%= render 'projects/card' %>
-  <%= render 'projects/card' %>
-  <%= render 'projects/card' %>
-  <%= render 'projects/card' %>
+  <% @portfolio.user.projects.order(created_at: :asc).each do %>
+    <%= render 'projects/card', project: _1 %>
+  <% end %>
 </div>
 

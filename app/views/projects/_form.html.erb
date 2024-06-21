@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-6 buffer-top">
+    <%= form_for @project || Project.new, html: { multipart: true } do |f| %>
+      <div class="mb-2">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="mb-2">
+        <%= f.label :status %>
+        <%= f.select :status, Project.statuses.keys.map { |status| [I18n.t("activerecord.attributes.project.statuses.#{status}"), status] }, {}, class: 'form-select' %>
+      </div>
+      <div class="mb-2" style="min-width: 800px">
+        <%= f.label :progress %>
+        <br>
+        <%= f.text_field :progress, class: 'form-range', min: '0', max: 100, step: 20, id: 'customRange3', type: :range %>
+        <datalist id="values">
+          <option value="0" label="0"></option>
+          <option value="20" label="20"></option>
+          <option value="40" label="40"></option>
+          <option value="60" label="60"></option>
+          <option value="80" label="80"></option>
+          <option value="100" label="100"></option>
+        </datalist>
+      </div>
+      <div class="mb-2">
+        <%= f.label :base_url %>
+        <%= f.text_field :base_url, class: 'form-control' %>
+      </div>
+      <div class="mb-2">
+        <%= f.label :code_url %>
+        <%= f.text_field :code_url, class: 'form-control' %>
+      </div>
+      <div class="mb-2">
+        <%= f.label :technologies %>
+        <%= f.text_field :technologies, class: 'form-control' %>
+      </div>
+      <div class="mt-4">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+      <div class="mb-2">
+        <%= f.label :short_description %>
+        <%= f.text_area :short_description, class: 'form-control', size: "30x3" %>
+      </div>
+      <div class="mb-2" style="min-width: 800px">
+        <%= f.label :content %>
+        <%= f.rich_text_area :content, style: 'min-height: 200px' %>
+      </div>
+      </div>
+      <div class="mt-4">
+        <%= f.submit t('links.save'), class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    </div>
+
+    <%= button_to 'Удалить', project_path(@project), method: :delete, class: 'btn btn-secondary mt-2 delete-button' %>
+</div>

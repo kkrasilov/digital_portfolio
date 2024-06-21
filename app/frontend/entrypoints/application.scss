@@ -6,7 +6,8 @@
 @import "../stylesheets/portfolio";
 @import "../stylesheets/about";
 @import "../stylesheets/awards";
-@import "../../../node_modules/trix/dist/trix";
+@import "../stylesheets/projects";
+@import "trix";
 
 * {
   padding: 0;
@@ -140,6 +141,28 @@ button:hover {
 
 .trix-button-group button,
 .trix-button-group button span {
-  font-size: 12px; /* Измените размер шрифта по вашему усмотрению */
-  padding: 2px 5px; /* Уменьшите внутренние отступы */
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 200px;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}
+
+trix-editor {
+  min-height: 300px;
+  background-color: #fff;
 }
