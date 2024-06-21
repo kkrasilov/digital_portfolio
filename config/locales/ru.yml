@@ -22,6 +22,14 @@ ru:
         title: 'Заголовок'
         description: 'Описание'
         file: 'Файл'
+      project:
+        title: "Заголовок"
+        status: "Статус"
+        progress: "Процесс"
+        content: "Описание"
+        statuses:
+          active: "Активный"
+          draft: "В процессе"
 
     errors:
       models:

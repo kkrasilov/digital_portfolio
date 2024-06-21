@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-
+    binding.pry
   end
 
   def edit

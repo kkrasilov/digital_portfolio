@@ -6,6 +6,7 @@
 @import "../stylesheets/portfolio";
 @import "../stylesheets/about";
 @import "../stylesheets/awards";
+@import "../../../node_modules/trix/dist/trix";
 
 * {
   padding: 0;
@@ -135,4 +136,10 @@ button:hover {
 
 .right {
   float: right;
+}
+
+.trix-button-group button,
+.trix-button-group button span {
+  font-size: 12px; /* Измените размер шрифта по вашему усмотрению */
+  padding: 2px 5px; /* Уменьшите внутренние отступы */
 }
