@@ -1,0 +1,23 @@
+<h2 class="border-bottom text-dark pb-2"><%= t('heading.change_password') %></h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render partial: 'shared/form_errors', locals: { model: @user } %>
+  <div class="col-md-4 mt-2">
+    <%= f.hidden_field :reset_password_token %>
+
+    <div class="form-group mt-2">
+      <%= f.label :password %>
+      <small class="form-text text-muted"><%= t('devise.characters_minimum') %> <%= @minimum_password_length %></small>
+      <%= f.password_field :password, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group mt-2">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+    </div>
+
+    <div class="actions mt-2">
+      <%= f.submit t('links.save'), class: 'btn btn-info' %>
+    </div>
+<% end %>
+</div>

@@ -1,0 +1,8 @@
+<%= render 'search' %>
+<div class="container mt-5 mb-3">
+  <div class="row">
+    <% @portfolios.each do %>
+      <%= render 'portfolios/card', portfolio: _1 %>
+    <% end %>
+  </div>
+</div>

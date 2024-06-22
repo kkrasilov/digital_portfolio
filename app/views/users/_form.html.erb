@@ -1,0 +1,46 @@
+<%= form_for user, html: { multipart: true } do |f| %>
+  <div class="mb-2">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :surname  %>
+    <%= f.text_field :surname, class: 'form-control' %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :position %>
+    <%= f.text_field :position, class: 'form-control' %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :role %>
+    <%= f.select :role, User.roles.keys, {}, class: 'form-select' %>
+  </div>
+
+  <div class="mb-2">
+    <%= f.label :about_me %>
+    <%= f.text_area :about_me, class: 'form-control', size: "70x5" %>
+  </div>
+  <div class="mt-4">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <% if user.admin? %>
+    <div class="mt-2 mb-2">
+      <%= f.label :admin_description %>
+      <%= f.text_area :admin_description, class: 'form-control' %>
+    </div>
+    <div class="mt-4">
+      <%= f.label :admin_avatar %>
+      <%= f.file_field :admin_avatar %>
+    </div>
+  <% end %>
+
+  <div class="mt-4">
+    <%= f.submit t('links.save'), class: 'btn btn-primary' %>
+  </div>
+<% end %>

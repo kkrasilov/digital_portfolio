@@ -1,0 +1,106 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+
+    attributes:
+      user:
+        email: 'Email'
+        first_name: 'Имя'
+        surname: 'Фамилия'
+        last_name: 'Отчество'
+        position: 'Позиция'
+        about_me: 'Обо мне'
+        avatar: 'Аватарка'
+        status: 'Статус'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        role: 'Направление'
+        admin_description: 'Роль в проекте'
+        admin_avatar: 'Дополнительный аватар'
+      award:
+        title: 'Заголовок'
+        description: 'Описание'
+        file: 'Файл'
+      project:
+        title: "Заголовок"
+        status: "Статус"
+        progress: "Процесс"
+        content: "Описание"
+        base_url: "Ссылка на проект"
+        code_url: "Ссылка на код"
+        technologies: "Стек технологий"
+        short_description: "Краткое описание"
+        image: "Заставка"
+        statuses:
+          done: "Завершен"
+          draft: "В процессе"
+
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              user_email_exists: 'Пользователь с таким email уже существует, пожалуйста авторизуйтесь!'
+
+  controllers:
+    application:
+      error: 'Упс! Что-то пошло не так. Код ошибки %{code}.'
+
+  app:
+    name: 'DIGITAL PORTFOLIO'
+
+  links:
+    root: "DIGITAL PORTFOLIO"
+    portfolio: 'Мое портфолио'
+    profile: 'Профиль'
+    register: 'Зарегистрироваться'
+    sign_in: 'Войти'
+    forgot_password: 'Забыли пароль?'
+    send_me: 'Отправить мне инструкции по сбросу пароля'
+    change: 'Изменить'
+    save: 'Сохранить'
+    to_return: 'Вернуться'
+    log_out: 'Выйти'
+    сhange_password: 'Сменить пароль'
+    edit_profile: 'Редактировать профиль'
+    update: 'Обновить'
+    delete_profile: 'Удалить мой аккаунт'
+    load: 'Загрузить'
+    to_home: 'На главную'
+    to_home_errors: 'на главную страницу'
+
+  devise:
+    characters_minimum: 'минимальное количесвто символов'
+
+  heading:
+    forgot_your_password: 'Забыли свой пароль?'
+    еdit_profile: 'Редактировать профиль'
+    delete_account: 'Удалить аккаунт?'
+    registration: 'Регистрация'
+    come_in: 'Войти'
+    editing_event: 'Редактирование события'
+    еdit_password: 'Редактировать пароль'
+    change_password: 'Изменить пароль'
+    new_project: 'Новый проект'
+    edit_project: 'Редактирование проекта'
+   
+  footer:
+    description: 'Создаем лучший сервис для портфолио с 2024 года'
+
+  errors:
+    one: "В вашей форме %{count} ошибка"
+    few: "В вашей форме %{count} ошибки"
+    many: "В вашей форме %{count} ошибок"
+    
+  notice: 
+    updated: 'Данные обновлены'
+    need_sign_in: 'Необхоидмо авторизоваться'
+    not_found: 'Запись не найдена'
+    delete_project: 'Проект удален'
+
+  time_last:
+    zero: 'Сегодня'
+    one: "%{count} день назад"
+    few: "%{count} дня назад"
+    many: "%{count} дней назад"  

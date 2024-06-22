@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Digital</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>DIGITAL PORTFOLIO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= vite_stylesheet_tag 'application.scss' %>
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
+  <%= vite_stylesheet_tag 'application.scss' %>
+  <%= vite_client_tag %>
+  <%= vite_javascript_tag 'application' %>
+</head>
 
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<%= render 'layouts/header' %>
+<main>
+  <div class="container">
+    <div class="row buffer-top">
+      <div class="mt-4 align-items-center">
+        <%= render 'shared/flash' if flash.present? %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+</body>
 </html>

@@ -1,0 +1,12 @@
+<div class="portfolio-title">
+  <h4 class="left">Проекты</h4>
+  <% if current_user == @portfolio.user %>
+    <%= link_to 'Добавить', new_project_path, class: 'btn btn-outline-secondary right' %>
+  <% end %>
+</div>
+<div class="awards-container">
+  <% @portfolio.user.projects.order(created_at: :asc).each do %>
+    <%= render 'projects/card', project: _1 %>
+  <% end %>
+</div>
+

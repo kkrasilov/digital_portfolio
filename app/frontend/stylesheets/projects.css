@@ -1,0 +1,71 @@
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.project-title {
+    font-size: 30px;
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text-bold {
+    font-weight: 800;
+}
+
+.text-project {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.progress-container {
+    width: 20%;
+    height: 30px;
+    background-color: #a5aec0;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.project-info {
+    padding: 10px;
+}
+
+.project-info-right {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.project-description {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+
+.project-second-title {
+    padding-top: 10px;
+}
