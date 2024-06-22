@@ -1,0 +1,63 @@
+<div class="project-container">
+  <div class="project-card">
+    <div class="project-title">
+      <span class="text-bold text-project">
+        <%= @project.title %>
+      </span>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: <%= @project.progress %>%;"><%= @project.progress %>%</div>
+      </div>
+    </div>
+    <div class="row project-info">
+      <div class="col-8">
+        <div class="project-description">
+          <span class="project-second-title text-bold">Описание</span>
+          <div style="padding-top: 10px">
+            <%= @project.content %>
+          </div>
+        </div>
+        <div class="project-description">
+          <span class="project-second-title text-bold">Стек технологий</span>
+          <div style="padding-top: 10px">
+            Ruby, Rails
+          </div>
+        </div>
+        <% if current_user.present? && @project.users.include?(current_user) %>
+          <div class="mt-4">
+            <%= link_to 'Редактировать',
+                        edit_project_path(@project), class: 'btn btn-outline-secondary' %>
+          </div>
+        <% end %>
+
+      </div>
+      <div class="col-4 project-info-right">
+        <div class="project-description">
+          <span class="project-second-title text-bold">Ссылки</span>
+          <div style="padding-top: 10px">
+            <% if @project.base_url.present? %>
+              <i class="bi bi-link-45deg"></i><%= link_to 'проект', @project.base_url, target: "_blank", rel: "noreferrer" %>
+              <br>
+            <% end %>
+            <% if @project.code_url.present? %>
+              <i class="bi bi-link-45deg"></i><%= link_to 'исходный код', @project.code_url, target: "_blank", rel: "noreferrer" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="project-description">
+          <span class="project-second-title text-bold">Участники</span>
+          <div style="padding-top: 10px">
+            <% @project.users.each do |user| %>
+              <%= link_to portfolio_path(user.portfolio), title: user.short_name do %>
+                <% if user.avatar.attached? %>
+                  <%= image_tag(user.avatar, class: 'img-fluid avatar-img-mini-two', alt: 'Аватарка') %>
+                <% else %>
+                  <%= vite_image_tag 'images/default_avatar.jpg', alt: "Аватарка", class: "img-fluid avatar-img-mini-two" %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

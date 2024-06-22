@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   has_one :portfolio, dependent: :destroy
+  has_many :project_users, dependent: :destroy
+  has_many :projects, through: :project_users
 
   has_one_attached :avatar
   has_one_attached :admin_avatar

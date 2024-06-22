@@ -29,6 +29,9 @@ import './application.scss'
 import toast from './toast'
 import { Modal } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
 import { Dropdown } from '../../../node_modules/bootstrap/dist/js/bootstrap.esm.min'
+import 'trix'
+import '@rails/actiontext'
+
 window.toast = toast;
 
 new Dropdown(document.getElementById('drown'));
